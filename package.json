@@ -1,0 +1,75 @@
+{
+  "name": "obe",
+  "version": "0.3.1",
+  "private": true,
+  "proxy": "https://app.obedog.com",
+  "_proxy": "http://localhost:8080",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/recharts": "^1.8.5",
+    "array.prototype.fill": "^1.0.2",
+    "axios": "^0.21.0",
+    "history": "^4.6.3",
+    "isomorphic-fetch": "latest",
+    "md5": "^2.2.1",
+    "mobx": "^6.0.4",
+    "mobx-react": "^7.0.5",
+    "mobx-react-lite": "^3.1.6",
+    "moment": "2.29.1",
+    "moment-timezone": "0.5.32",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.2",
+    "react": "latest",
+    "react-dom": "^16.5.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.0.0",
+    "recharts": "^1.8.5",
+    "sass-resources-loader": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.12",
+    "@storybook/addon-controls": "^6.1.12",
+    "@storybook/addon-links": "^6.1.12",
+    "@storybook/addons": "^6.1.12",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.12",
+    "@types/classnames": "^2.2.10",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/recharts": "^1.8.12",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "typescript-plugin-css-modules": "^2.3.0"
+  }
+}

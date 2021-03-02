@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .base{
+    z-index: 0;
+  }
+
+  .item{
+    position: absolute;
+    z-index: 1;
+  }
+
+  .baseColor {
+    z-index: 2;
+    position: absolute;
+  }
+
+  .closed {
+    z-index: 3;
+    position: absolute;
+  }
+}
+

@@ -1,0 +1,152 @@
+@import "./vars";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: $color-text-primary;
+  background-color: $color-bg-light;
+}
+
+
+.screen {
+
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  flex-flow: column;
+  color: $color-text-primary;
+  //height: 100vh;
+
+  > header {
+    min-height: 45px;
+    flex-grow: 0;
+    //background-color: $color-bg-light;
+    display: flex;
+    margin-top: $unit*3;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $unit;
+    align-items: center;
+    border-bottom: 1px solid #F6F6F6;
+
+    @include mobile{
+      margin-top: 0;
+    }
+
+    >a{
+      flex-grow: 0.1;
+    }
+
+    h3 {
+      align-self: center;
+      text-align: center;
+      @include Body1-Bold;
+      flex-grow: 1;
+    }
+
+    >div:last-child{
+      flex-grow: 0;
+      min-width: 60px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+   main {
+    flex-grow: 1;
+    overflow: auto;
+  }
+}
+
+
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  //align-items: center;
+}
+
+.widget {
+  background-color: $color-white;
+  border-radius: $unit*1.5;
+  padding: $unit;
+  height: fit-content;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: $color-text-primary;
+  }
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+.widget {
+  background-color: $color-white;
+  border-radius: $unit*1.5;
+  padding: $unit*2;
+  height: fit-content;
+}
+
+.storybookContainer {
+  width: 375px;
+  background-color: #fff;
+  border-radius: $unit;
+  margin-bottom: $unit;
+  padding: $unit*2;
+}
+
+
+.primaryBg {
+  background-color: $color-bg-primary;
+}
+
+.whiteIcon {
+  path {
+    fill: #fff;
+  }
+}
+
+.primaryIcon {
+  path {
+    fill: $color-bg-dark;
+  }
+}
+
+
+.storybookGrid {
+  display: grid;
+  gap: 20px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//Material UI customization
+.MuiInputBase-input.Mui-disabled{
+  background-color: $color-bg-light;
+}

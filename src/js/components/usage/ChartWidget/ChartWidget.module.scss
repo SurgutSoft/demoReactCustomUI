@@ -1,0 +1,18 @@
+@import "src/styles/vars";
+
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: $unit 0 0 0;
+}
+
+.chart {
+  padding: $unit*2 $unit;
+  padding-top: 41px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

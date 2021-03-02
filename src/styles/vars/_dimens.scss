@@ -1,0 +1,18 @@
+$unit: 8px;
+
+$sidebar-width: 330px;
+$mobile-photo-head: 180px;
+$desktop-screen-content-width: 350px;
+$widget-radius: $unit*1.5;
+
+@mixin mobile {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1130px) {
+    @content;
+  }
+}

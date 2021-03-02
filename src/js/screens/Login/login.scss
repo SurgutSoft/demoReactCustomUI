@@ -1,0 +1,77 @@
+@import "styles/vars";
+
+
+$login-form: 275px;
+
+.Login {
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white;
+
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include mobile() {
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 170px;
+      height: auto;
+    }
+  }
+
+  main {
+    width: $login-form;
+  }
+
+  form {
+    margin-bottom: 20px;
+
+
+    .ant-form-item {
+      margin-bottom: 20px;
+    }
+
+    input {
+      font-size: 17px;
+      height: 2em;
+      padding: 0 1.5em;
+      width: $login-form - 20;
+      margin: 0 40px;
+    }
+
+    button[type="submit"] {
+      font-size: 14px;
+      height: 3em;
+      font-weight: bold;
+      width: $login-form;
+      margin-bottom: 0;
+    }
+  }
+
+  .description {
+    color: $color-text-secondary;
+  }
+
+  .error-description {
+
+    font-weight: 600;
+  }
+
+  .backIcon {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+
+    i {
+      font-size: 30px
+    }
+  }
+}

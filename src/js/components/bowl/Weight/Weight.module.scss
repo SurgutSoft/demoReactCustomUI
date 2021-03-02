@@ -1,0 +1,63 @@
+@import "src/styles/vars";
+
+.wrapper {
+  font-weight: 600;
+
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 2px;
+  }
+
+  svg {
+    margin-left: 2px;
+    margin-top: 1px;
+    vertical-align: top;
+  }
+}
+.overfed{
+  color: $color-text-red;
+}
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 18px;
+  svg {
+    margin-top: 0;
+  }
+}
+
+.large {
+  font-size: 32px;
+  line-height: 32px;
+  svg {
+    margin-top: -6px;
+  }
+}
+
+.primary {
+  color: $color-text-accent-dark;
+}
+
+.black {
+  color: black;
+}
+
+.gray {
+  color: $color-text-secondary;
+}
+
+
+.blue {
+  color: $color-text-blue;
+}
+
+.red {
+  color: $color-text-red;
+
+  path{
+    fill: $color-text-red;
+  }
+}

@@ -1,0 +1,37 @@
+@import "src/styles/vars";
+
+:export {
+  barColorFood: $color-bg-dark;
+  barColorFoodPlan: #ECE4DD;
+  xAxisColorFood: $color-bg-primary;
+  barColorWater: $color-bg-blue;
+  barColorOver: $color-bg-red;
+  strokeColor: #A6ABAB;
+}
+
+.customTooltip{
+  border-radius: 5px;
+  padding: $unit;
+  color: $color-white;
+  background-color: $color-bg-dark;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.xaxis {
+  @include Caption;
+  color: $color-text-secondary;
+}
+
+.lastTickArrow{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;;
+  bottom: 0;
+  background-color: $color-bg-blue;
+}
+
+
+
+
+

@@ -1,0 +1,61 @@
+
+
+@mixin H2-Semibold {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 43px;
+}
+
+@mixin H3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+@mixin H4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin Body1-Bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Body1-Semibold {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Body1{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Body2-Semibold {
+  font-weight: 600;
+  font-size: 14px;
+  line-height:  24px;
+}
+
+@mixin Body2{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@mixin Caption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+
+}
+
+@mixin Caption-Semybold {
+  font-weight: 600;
+  font-size: 12px;
+  line-height:  16px;
+}

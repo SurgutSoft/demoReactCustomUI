@@ -1,0 +1,129 @@
+@import "src/styles/vars";
+
+.wrapper{
+  width: 100%;
+
+  .mobileWrapper {
+    position: relative;
+    background-color: $color-white;
+    border-radius: 12px;
+
+    .mainBlockWrapper {
+      min-width: 140px;
+      max-width: 100%;
+      min-height: 155px;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+      height: 50%;
+
+      .onlineBowl {
+        position: absolute;
+        width: 116px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: -3%;
+        text-align: center;
+        .batteryBlock{
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          .name{
+            @include Caption-Semybold;
+            color: $color-text-gray-800;
+            padding-top: $unit;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+
+      .offlineBowl {
+        display: grid;
+        width: 100%;
+        padding-top: 2*$unit;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .infoWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 60%;
+
+        .infoContent{
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          @include Caption-Semybold;
+          color: $color-text-gray-800;
+
+          .days{
+            color:$color-text-primary;
+          }
+
+          .weight{
+            display: flex;
+            padding-left: 5px;
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+          }
+
+          .weightCup{
+            @extend .weight;
+            padding-left: 16px
+          }
+        }
+
+        .infoContentOffline {
+          @extend.infoContent;
+          padding-top: 2*$unit;
+          text-align: center;
+        }
+      }
+
+      .lastSync{
+        @include Caption-Semybold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+
+        span {
+          padding-left: 5px;
+        }
+      }
+    }
+
+    .divider{
+      height: 1px;
+      width: 100%;
+      background-color: $color-bg-light;
+    }
+
+
+    .lastUsageContent{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .desktopWrapper {
+    @extend.mobileWrapper;
+    display: flex;
+  
+    .divider{
+      width: 2px;
+      height: auto;
+    }
+  }  
+}

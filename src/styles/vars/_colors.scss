@@ -1,0 +1,45 @@
+//Color palette (from figma)
+$_primary-800: #4F3F33;
+$_primary-700: #835839;
+$_primary-600: #A27957;
+$_primary-400: #C3996B;
+$_gray-900: #091616;
+$_gray-800: #585F5F;
+$_gray-600: #737878;
+$_gray-500: #A6ABAB;
+$_gray-400: #C1C3C3;
+$_gray-300: #CCCCCC;
+$_gray-100: #F4F3F1;
+$_red-500: #FD5B27;
+$_green-400: #89C920;
+$_blue-500: #28A9E1;
+$_blue-400: #5FBEE7;
+$color-white: #FFFFFF;
+
+
+//Text colors
+$color-text-primary: $_gray-900;
+$color-text-gray-800: $_gray-800;
+$color-text-secondary: $_gray-600;
+$color-text-disabled: $_gray-500;
+$color-text-accent: $_primary-600;
+$color-text-accent-dark: $_primary-700;
+$color-text-blue: $_blue-500;
+$color-text-red: $_red-500;
+$color-text-green: $_green-400;
+
+//Background colors
+$color-bg-primary: $_primary-400;
+$color-bg-dark: $_primary-600;
+$color-bg-darkest: $_primary-700;
+$color-bg-light: $_gray-100;
+$color-bg-gray: $_gray-400;
+$color-bg-blue: $_blue-400;
+$color-bg-darkblue: $_blue-500;
+$color-bg-red: $_red-500;
+$color-bg-modal: rgba(0, 0, 0, 0.4);
+
+
+:export{
+  colorBgPrimary:  $color-bg-primary
+}

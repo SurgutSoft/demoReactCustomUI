@@ -1,0 +1,20 @@
+export { ReactComponent as PlusIcon } from '../../../../images/icons/plus.svg';
+export { ReactComponent as VolumeIcon } from '../../../../images/icons/volume.svg';
+export { ReactComponent as CheckedIcon } from '../../../../images/icons/checked.svg';
+export { ReactComponent as BorderIcon } from '../../../../images/icons/border.svg';
+export { ReactComponent as CupIcon } from '../../../../images/icons/cup.svg';
+export { ReactComponent as OkGreenIcon } from '../../../../images/icons/okGreen.svg';
+
+export { ReactComponent as ArrowRightIcon } from '../../../../images/material-icons/arrow-right.svg';
+export { ReactComponent as MoreIcon } from '../../../../images/material-icons/more.svg';
+export { ReactComponent as BackIcon } from '../../../../images/material-icons/back_icon.svg';
+export { ReactComponent as DogFootIcon } from '../../../../images/material-icons/pets.svg';
+export { ReactComponent as AboutIcon } from '../../../../images/material-icons/info.svg';
+export { ReactComponent as FaceIcon } from '../../../../images/material-icons/account.svg';
+export { ReactComponent as PetsIcon } from '../../../../images/material-icons/pets.svg';
+export { ReactComponent as PaletteIcon } from '../../../../images/material-icons/palette.svg';
+export { ReactComponent as SupportIcon } from '../../../../images/material-icons/support_agent.svg';
+export { ReactComponent as CloseIcon } from '../../../../images/material-icons/close.svg';
+export { ReactComponent as SettingsIcon } from '../../../../images/material-icons/settings.svg';
+export { ReactComponent as NotificationsIcon } from '../../../../images/material-icons/notifications.svg';
+export { ReactComponent as SidebarIcon } from '../../../../images/material-icons/menu.svg';

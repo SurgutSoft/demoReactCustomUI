@@ -1,0 +1,143 @@
+@import "src/styles/vars";
+
+.widgetWrapper {
+  width: 100%;
+  min-width: 310px;
+  border-radius: $unit*1.5;
+  background-color: $color-white;
+  overflow: hidden;
+  padding-bottom: $unit*2;
+  
+  .photoWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    .photo{
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .bottomWrapper {
+      position: relative;
+      .photoBottom {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      .editIcon{
+        z-index: 2;
+        position: absolute;
+        bottom: 10px;
+        right: 16px;
+      }
+    }
+  }
+
+  .infoWrapper{
+    display: grid;
+    z-index: 3;
+
+    justify-content: center;
+    text-align: center;
+    padding: 0 $unit*5;
+    transform: translate(0, -20px);
+
+    .name{
+      @include H3;
+      color: $color-text-primary;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .commonInfo {
+      @include Body2;
+      color: $color-text-secondary;
+      padding-top: 12px;
+    }
+
+    .bodyInfoWrapper{
+      display: flex;
+      justify-content: center;
+      padding-top: $unit*2;
+
+      .body {
+        display: grid;
+
+        span{
+          @include Caption-Semybold;
+          color: $color-text-gray-800;
+        }
+      }
+
+      .divider{
+        width: 1px;
+        height: 51px;
+        background-color: $color-bg-light;
+        margin: 0 $unit*3;
+      }
+    }
+
+    .caloriesWrapper {
+      padding-top: 26px;
+
+      .title{
+        @include Body1-Bold;
+        color: $color-text-primary;
+      }
+
+      .recommendedBy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+          @include Caption;
+          color: $color-text-secondary;
+        }
+        img {
+          padding-left: 5px;
+        }
+      }
+
+      .kcalWrapper {
+        padding-top: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .kcal{
+          @include H2-Semibold;
+          color: $color-text-accent-dark;
+        }
+
+        .kcalLeft{
+          display: grid;
+          align-content: flex-start;
+          padding-left: 5px;
+          text-align: left;
+          span {
+            @include Body2;
+            color: $color-text-accent-dark;
+            line-height: 12px;
+          }
+          span + span {
+            @include Caption;
+            color: $color-text-primary;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapperDesktop{
+  @extend .widgetWrapper;
+  max-width: 380px;
+}

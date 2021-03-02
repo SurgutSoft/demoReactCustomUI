@@ -1,0 +1,29 @@
+@import "src/styles/vars";
+
+.wrapper {
+  position: fixed;
+  width: 64px;
+  height: 100%;
+  background-color: #fff;
+
+  .menuBtn {
+    margin: $unit;
+    margin-bottom: 0;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  .logo{
+    position: absolute;
+    top: 10px;
+    left: 90px;
+
+    @include tablet{
+      display: none;
+    }
+  }
+
+
+}

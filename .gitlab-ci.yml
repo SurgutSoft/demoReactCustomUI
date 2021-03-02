@@ -1,0 +1,57 @@
+image: ubuntu
+
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
+  - eval $(ssh-agent -s)
+  - echo "$DEPLOY_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:10.19.0
+  before_script:
+    - npm i
+  script:
+    - npm run build
+    - npm run build-storybook
+  artifacts:
+    paths:
+      - build/
+      - storybook-static/
+    expire_in: 10d
+  only:
+    - master
+    - develop
+
+deploy:dev:
+  stage: deploy
+  script:
+    - scp -o StrictHostKeyChecking=no -r build/* deploy@app.staging.obedog.com:/var/www/app-ui
+    - scp -o StrictHostKeyChecking=no -r storybook-static/* deploy@app.staging.obedog.com:/var/www/app-storybook
+  environment:
+    name: console
+  dependencies:
+    - build
+  only:
+    - develop
+
+deploy:prod:
+  stage: deploy
+  script:
+    - scp -o StrictHostKeyChecking=no -r build/* deploy@app.obedog.com:/var/www/app-ui
+  environment:
+    name: console
+  dependencies:
+    - build
+  only:
+    - master
+
+
+

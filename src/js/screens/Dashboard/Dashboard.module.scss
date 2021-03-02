@@ -1,0 +1,208 @@
+@import "src/styles/vars";
+
+.dashboardDeskWrapper {
+  display: flex;
+  justify-content: center;
+  .desktopWrapper{
+    display: flex;
+    background-color: $color-bg-light;
+    max-width: 1050px;
+    min-width: 900px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+
+
+    .alertWrapper {
+      width: 100%;
+      display: none;
+    }
+
+    .animalWidget{
+      padding-left: $unit*3;
+    }
+
+    .rightWidgetsWrapper {
+      display: grid;
+      gap: $unit*3;
+
+      .twoBowlWidgetWrapper{
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .bowlWrapper{
+          display: grid;
+          gap: $unit*3;
+          height: fit-content;
+
+          .baner {
+            @extend .baner;
+            height: 100%;
+          }
+        }
+
+        .bowlWrapper + .bowlWrapper {
+          padding-left: $unit*3;
+        }
+      }
+
+      .oneBowlWidgetsWrapper {
+        display: grid;
+        gap: $unit*3;
+        width: 100%;
+        height: fit-content;
+  
+        .otherWidgets{
+          display: flex;
+          justify-content: center;
+          height: fit-content;
+          
+          .foodGrid{
+            display: grid;
+            gap: $unit*2;
+          }
+  
+          .chartWidget{
+            padding-left: $unit*3;
+
+            .baner{
+              @extend .baner;
+              margin-top: $unit*2;
+              height: 275px;
+            }
+          }
+        }
+  
+        .infoBaner{
+          background-color: white;
+          height: 305px;
+        }
+      }
+
+      .baner {
+        width: 100%;
+        max-width: 570px;
+        border: 1px solid black;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .mealPlanWidget {
+        display: flex;
+
+        .baner {
+          @extend .baner;
+          margin-left: $unit*2;
+        }
+      }
+    }
+  }
+}
+
+.dashboardMobileWrapper {
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  
+  .mobileWrapper {
+    padding: 0 20px 20px 20px;
+    display: grid;
+    background-color: $color-bg-light;
+    gap: $unit*2;
+    
+    .twoBowlWrapper{
+      display: grid;
+      gap: $unit*3;
+      width: 100%;
+
+      .bowls{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start ;
+        
+        .foodBowl {
+          width: 50%;
+        }
+
+        .waterBowl{
+          margin-left: $unit*2;
+          width: 50%;
+        }
+      }
+    }
+
+    .oneBowlWrapper{
+      display: grid;
+      gap: $unit*3;
+      width: 100%;
+    }
+
+    .mobileHead {
+      height: $mobile-photo-head;
+      width: 100%;
+      overflow: hidden;
+    
+      h2 {
+        width: 100%;
+        @include H3;
+        top: 20px;
+        left: 0;
+        position: absolute;
+        text-align: center;
+    
+        color: white;
+      }
+    
+      .menuBtn {
+        position: absolute;
+        top: 30px;
+        left: $unit;
+        circle {
+          fill: white;
+        }
+      }
+    
+    
+      @include mobile {
+        display: flex;
+        overflow: hidden;
+      }
+    
+      .photo {
+        position: absolute;
+        overflow: hidden;
+        height: $mobile-photo-head;
+        top: 0;
+        left: 0;
+    
+        img {
+          width: 100%;
+          max-width: 600px;
+        }
+      }
+    
+      .darkcover {
+        position: absolute;
+        width: 100%;
+        height: $mobile-photo-head;
+        left: 0;
+        top: 0;
+    
+        background: linear-gradient(0deg, rgba(40, 42, 49, 0.4), rgba(40, 42, 49, 0.4));
+      }
+    
+      .photoBottom {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: $mobile-photo-head - 20;
+        background-size: 100%;
+        left: 0;
+        background-repeat: no-repeat;
+        background-image: url('../../../images/custom/animalPhotoBottomGray.svg');
+      }
+    }      
+  }
+}

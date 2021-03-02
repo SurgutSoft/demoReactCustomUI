@@ -1,0 +1,95 @@
+@import "src/styles/vars";
+
+$animal-badge-height: 36px;
+$animal-badge-padding: 5px;
+
+.darkBgWrapper {
+  display: flex;
+  align-items: center;
+
+  margin-top: $unit;
+
+
+  .AnimalBadge + .AnimalBadge {
+    margin-left: $unit*1.5;
+  }
+
+  .AnimalBadge {
+    height: $animal-badge-height;
+
+    // border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    zoom: 1.2;
+
+
+    &.addBtn {
+      zoom: 1.1;
+
+      :hover {
+        filter: brightness(90%);
+      }
+    }
+
+    button {
+      width: 36px;
+    }
+
+    .borderCurrent {
+      position: absolute;
+    }
+
+    &.current {
+      border-radius: 8px;
+      zoom: 1.1;
+    }
+
+    & > .avatar {
+      $img-width: $animal-badge-height - 2 * $animal-badge-padding;
+
+      border-radius: 6px;
+      height: $animal-badge-height - 2;
+      width: $animal-badge-height - 2;
+      object-fit: cover;
+
+      &.material-icons {
+        font-size: $img-width;
+        line-height: 1;
+        color: rgba($color-white, 0.8);
+      }
+    }
+
+    & > .title-wrap {
+      margin-left: $unit/ 2;
+      margin-right: $unit*2.5;
+
+      .title {
+        margin: 0;
+        color: $color-white;
+        line-height: 1;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .bowls {
+        margin: 0;
+        line-height: 1;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.whiteBgWrapper {
+  @extend .darkBgWrapper;
+  display: grid;
+  justify-content: center;
+  gap: $unit*2;
+
+  .AnimalBadge + .AnimalBadge {
+    margin-left: 0;
+  }
+}

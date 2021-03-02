@@ -1,0 +1,102 @@
+@import "src/styles/vars";
+
+
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  overflow: hidden;
+
+  .logo {
+    cursor: default;
+
+    .bigFootIcon {
+      height: 140px;
+      position: absolute;
+      right: 0;
+      margin-top: -10px;
+      z-index: 1;
+    }
+
+    .closeMenu {
+      position: absolute;
+      cursor: pointer;
+      right: $unit/2;
+      top: $unit/2;
+      z-index: 10;
+    }
+  }
+
+  .header {
+    padding: $unit*5 0 0 $unit*3;
+    height: 130px;
+    background-color: $color-bg-primary;
+
+
+    .animals {
+      display: flex;
+      padding-top: $unit*1.5;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      & > * {
+        margin-bottom: $unit;
+        margin-right: $unit;
+
+        &:nth-last-of-type(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .menuItem {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background-color: $color-white;
+    padding-top: $unit*2;
+
+    a {
+      @include Body2;
+      align-items: center;
+      line-height: 1;
+      padding: $unit*1.5 $unit*2.5;
+      display: flex;
+      color: $color-text-primary;
+      cursor: pointer;
+      transition: all 200ms ease-out;
+
+      div {
+        padding-left: $unit*3;
+      }
+
+      &:hover {
+        color: $color-text-accent-dark;
+        background-color: $color-bg-light;
+
+        path{
+          fill: $color-text-accent;
+        }
+      }
+    }
+
+    .wrapperButtons {
+      width: 100%;
+      position: absolute;
+      bottom: $unit*4;
+
+      .btnblock {
+        padding: 0 $unit*3;
+
+        button {
+          width: 100%;
+          // width: 285px; //TODO fix
+        }
+
+        button + button {
+          margin-top: $unit*2;
+        }
+      }
+    }
+  }
+}

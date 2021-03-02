@@ -1,0 +1,90 @@
+@import "../../../styles/vars";
+
+
+
+
+.content {
+  padding: $unit*3;
+  max-width: $desktop-screen-content-width;
+  margin: 0 auto;
+
+  @include mobile{
+    max-width: none;
+  }
+
+  .titleWrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: 140px;
+      margin: 0 auto;
+      padding-bottom: $unit*2;
+    }
+
+    .name {
+      @include H4;
+      font-weight: 400;
+      padding-bottom: $unit;
+      text-transform: capitalize;
+
+      img {
+        padding-left: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .titleInfo {
+      @include Body2;
+      line-height: 22px;
+
+      span {
+        color: $color-text-secondary;
+      }
+
+      span + span {
+        color: $color-text-primary;
+      }
+    }
+  }
+
+  .bowlInfoWrapper {
+    display: grid;
+    gap: $unit*2;
+    padding-top: $unit*3;
+
+    .title {
+      @include H4;
+      font-weight: 400;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        @include Body2;
+        color: $color-text-primary;
+      }
+
+      div + div {
+        color: $color-text-accent-dark;
+      }
+    }
+  }
+
+  .bowlInfoWrapper + .bowlInfoWrapper {
+    padding-top: $unit*4;
+  }
+
+  .bowlIndications {
+    margin-left: -15px;
+    padding-top: $unit*3;
+  }
+}

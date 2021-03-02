@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.obedog.probowl.v2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://java.sun.com/xml/ns/j2ee">
+    <name>Obe-ProBowl</name>
+    <description>
+        Obe-ProBowl
+    </description>
+    <author email="support@obedog.com" href="http://obedog.com">
+        Obedog Team
+    </author>
+    <!--<content src="index.html"/>-->
+    <content src="http://192.168.1.38:3000"/>
+    <allow-navigation href="http://192.168.1.38:3000"/>
+    <allow-navigation href="gap://ready"/>
+
+    <access origin="*"  />
+
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine"/>
+    </feature>
+    <preference name="WKWebViewOnly" value="true"/>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
+
+    <preference name="AndroidLaunchMode" value="singleInstance" />
+
+
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true"/>
+        </edit-config>
+
+        <allow-intent href="market:*"/>
+        <resource-file src="blinkup/blinkup.aar" target="app/libs/blinkup.aar"/>
+        <resource-file src="blinkup/MainActivity.java" target="app/src/main/java/com/obedog/MainActivity.java"/>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
+    </platform>
+</widget>

@@ -1,0 +1,74 @@
+@import "../../../styles/vars";
+
+
+.wrapper {
+  background-color: $color-bg-light;
+
+  @include mobile {
+    height: 100vh;
+  }
+}
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  min-height: 400px;
+  padding: $unit*2 $unit*6;
+  @include mobile {
+    padding: $unit*2;
+  }
+}
+
+.summary {
+  display: flex;
+  padding: $unit*2 0;
+  justify-content: space-between;
+
+  > div:first-child {
+    display: flex;
+  }
+
+  label {
+    @include Caption;
+  }
+
+  .overfed label {
+    color: $color-text-red;
+  }
+
+  .normal {
+
+    svg{
+      width: 30px;
+      height: 30px;
+      margin: 6px 2px 0 10px;
+    }
+    color: $color-text-green;
+  }
+
+  .divider {
+    width: 1px;
+    background-color: $color-bg-gray;
+    margin: 0 $unit*2 0 $unit*1.5;
+  }
+
+  .center{
+    justify-content: center;
+  }
+}
+
+
+.chart {
+  background-color: white;
+  border-radius: $widget-radius;
+  padding: $unit*2 $unit*2;
+  height: 200px;
+
+  @include mobile {
+    padding: $unit*3 $unit;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../../../styles/vars";
+
+
+.group {
+  display: flex;
+
+  button {
+    @include Body2;
+    border-radius: 6px;
+    outline: none;
+    border: 0;
+    padding: $unit $unit*2;
+    color: $color-text-secondary;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+
+    &:hover {
+      color: $color-text-accent-dark;
+      //background-color: $color-bg-light;
+    }
+
+    &.active {
+      padding: $unit $unit*2;
+      color: $color-white;
+      background-color: $color-bg-primary;
+
+      &:hover {
+        background-color: $color-bg-dark;
+      }
+    }
+
+  }
+
+  &.blue1 {
+
+    button {
+      color: $color-text-secondary;
+
+      &.active {
+        color: $color-white;
+        background-color: $color-bg-blue;
+
+        &:hover {
+          background-color: $color-bg-darkblue;
+        }
+      }
+    }
+
+
+  }
+
+
+}
+

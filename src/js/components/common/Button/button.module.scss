@@ -1,0 +1,143 @@
+@import "../../../../styles/vars";
+
+.commonStyles {
+  cursor: pointer;
+  color: $color-white;
+  @include Body2-Semibold ;
+  font-weight: 400;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 0 $unit*2;
+  height: 36px;
+  border: 1px solid $color-bg-primary;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    margin-right: $unit;
+  }
+
+  path {
+    fill: $color-bg-primary;
+  }
+
+  span {
+    display: flex;
+  }
+}
+
+.details{
+  border-color: transparent;
+  padding-right: $unit/2;
+  svg{
+    margin: 0;
+  }
+}
+
+.disabled {
+  @extend .commonStyles;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+
+.primary {
+  @extend .commonStyles;
+  background-color: $color-bg-primary;
+
+  path {
+    fill: #fff;
+  }
+
+  &:hover {
+    background-color: $color-bg-dark;
+  }
+
+  &:active {
+    background-color: $color-bg-darkest;
+  }
+}
+
+.primaryDisabled {
+  @extend .disabled;
+  background-color: $color-bg-gray;
+}
+
+.default {
+  @extend .commonStyles;
+  background-color: transparent;
+  color: $color-text-accent;
+
+  &:hover {
+    color: $color-text-accent-dark;
+    border-color: $color-text-accent-dark;
+
+    path {
+      fill: $color-text-accent-dark;
+    }
+  }
+
+  &:active {
+    color: $color-text-primary;
+    border-color: $color-text-primary;
+  }
+}
+
+.defaultDisabled {
+  @extend .disabled;
+  border: 1px solid $color-text-secondary;
+  color: $color-text-secondary;
+}
+
+.text {
+  @extend .commonStyles;
+  @include Body2-Semibold;
+  color: $color-text-accent;
+  border-width: 0;
+  background-color: transparent;
+
+  &.blue{
+    color: $color-text-blue;
+    path{
+      fill: $color-text-blue;
+    }
+  }
+  &:hover {
+    color: $color-text-accent-dark;
+    background-color: $color-bg-light;
+    path{
+      fill: $color-text-accent-dark;
+    }
+
+    &.blue{
+      color: $color-text-blue;
+      path{
+        fill: $color-text-blue;
+      }
+    }
+  }
+t
+  &:active {
+    color: $color-text-primary;
+  }
+}
+
+.textDisabled {
+  @extend .disabled;
+  @include Body2-Semibold;
+  color: $color-text-disabled;
+  background-color: transparent;
+}
+
+.large {
+  height: 48px;
+}
+
+.middle {
+  height: 36px;
+}
+
+.small {
+  height: 24px;
+}

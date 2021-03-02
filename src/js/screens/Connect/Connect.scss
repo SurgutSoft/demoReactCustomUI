@@ -1,0 +1,280 @@
+@import "src/styles/vars";
+
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+@keyframes phone-movement {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.Connect {
+    padding: 30px;
+    width: 375px;
+    height: fit-content;
+    min-height: 660px;
+    border-radius: 10px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    position: relative;
+
+    @include mobile {
+        //width: $connect-card-mobile-width;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    & > .back-icon {
+        align-self: self-start;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    & > .ant-steps {
+        position: absolute;
+        bottom: 42px;
+    }
+
+    & > .title {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+
+        margin-bottom: 0;
+
+    }
+
+    .step-title {
+        font-family: Open Sans;
+        font-weight: 300;
+
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    .step-circle {
+        width: 190px;
+        height: 190px;
+        border-radius: 95px;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 15%;
+
+        & > svg {
+            position: absolute;
+            bottom: 12px;
+        }
+        & > img {
+            width: 77px;
+            height: 152px;
+            bottom: -40px;
+            position: absolute;
+        }
+    }
+
+    .details {
+
+        line-height: 19px;
+        text-align: center;
+        white-space: pre-wrap;
+        margin-top: 15%;
+        color: rgba(0, 0, 0, 0.8);
+    };
+
+    .ant-btn-primary {
+        width: 253px;
+
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 12%;
+
+        @include mobile {
+            width: 220px;
+        }
+    }
+
+    .ant-btn-link {
+
+        font-size: 15px;
+        margin-top: 1rem;
+    }
+
+    .prepare {
+        text-align: center;
+
+        .blink {
+
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            position: relative;
+            left: -41px;
+            top: 135px;
+            animation: blinker 1s linear infinite;
+        }
+    }
+
+    .wifi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > svg {
+            margin-top: 40px;
+        }
+        & > .ant-input {
+            margin-top: 30px;
+        }
+        .ant-input, .ant-input-password {
+            width: 202px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .ant-input {
+            padding: 35px 15px 18px 15px;
+
+        }
+        .ant-input-suffix {
+            top: 65%;
+        }
+        .ant-input-password-icon {
+
+        }
+    }
+
+    .blinkup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .step-circle img {
+            animation: phone-movement 1s linear;
+        }
+    }
+
+    .assign {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .mac {
+            display: flex;
+            margin: auto;
+            margin-top: 3%;
+            padding: 4px  10px;;
+            width: max-content;
+
+            border-radius: 20px;
+            font-family: Open Sans;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+
+            text-align: center;
+            align-items: center;
+
+            & > svg {
+                margin-right:  10px;;
+            }
+        }
+        .bowl-animal {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20%;
+
+            & > img {
+                width: 142px;
+                height: 69px;
+            }
+            & > svg {
+                margin: 0 10px;
+            }
+            & > .current-animal {
+                width: 136px;
+                padding: 3px;
+
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                font-weight: bold;
+                padding: 3px;
+                padding-right: 13px;
+
+                img {
+                    width: 35px;
+                    height: 36px;
+                    border-radius: 18px;
+                }
+            }
+        }
+        .details {
+            color: $color-text-secondary;
+            margin-bottom: 1rem;
+        }
+
+        .ant-radio-button-wrapper {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            color: #B3B3B3;
+            font-weight: 600;
+
+            &-checked {
+
+                box-shadow: unset;
+
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.power-modal {
+    .ant-modal-confirm-title {
+        display: inline-block;
+        margin-left: 35px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .ant-modal-confirm-btns {
+        .ant-btn-link {
+
+        }
+        .ant-btn-primary {
+            border-radius: 4px;
+        }
+    }
+    .ant-modal-content {
+        border-radius:9px;
+    }
+    .anticon-question-circle {
+        display: none;
+    }
+
+    .modal-content {
+        white-space: pre-wrap;
+        padding-left: 55px;
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../../styles/vars";
+
+
+.content {
+  padding: $unit*3;
+  max-width: $desktop-screen-content-width;
+  margin: 0 auto;
+
+  @include mobile{
+    max-width: none;
+  }
+}
+

@@ -1,0 +1,15 @@
+export enum Path {
+  home = '/home',
+  animal = '/animal',
+  animalNew = '/animal/new',
+  animalEdit = '/animal/edit',
+  bowlDetails = '/bowl/:type',
+  account = '/account',
+  report = '/report/:type',
+  mealPlan = '/mealplan',
+  notifications = '/notifications',
+  bowlColors = '/bowl/colors',
+  dogPark = '/dogpark',
+  settings = '/settings',
+  about = '/about',
+}

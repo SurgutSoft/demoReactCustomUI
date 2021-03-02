@@ -1,0 +1,80 @@
+@import "src/styles/vars";
+
+.widgetWrapper {
+
+  .titleWrapper {
+    align-items: center;
+    position: relative;
+    min-width: 300px;
+    .title{
+      @include Body1-Bold;
+      color: $color-text-primary;
+      text-align: center;
+    }
+    .detailsBtn{
+      position: absolute;
+      right: -12px;
+      top: -5px;
+    }
+  }
+
+  .timesWrapper{
+    padding-top: $unit*2;
+
+    .times {
+      @include H2-Semibold;
+      color: $color-text-accent-dark;
+      position: relative;
+
+      sup {
+        @include Caption;
+        position: absolute;
+        top: -8px;
+      }
+    }
+    .caption {
+      @include Caption;
+      color: $color-text-primary;
+    }
+
+
+  }
+
+  .mealWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >div:first-child{
+      padding-left: 25px;
+    }
+  }
+
+  .showTimesWrapper{
+    display: grid;
+    padding-top: $unit*3;
+
+    .row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: $color-bg-light solid 1px;
+      height: 57px;
+
+      .timeCol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-text-secondary;
+
+        img{
+          width: 28px;
+        }
+
+        span {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
